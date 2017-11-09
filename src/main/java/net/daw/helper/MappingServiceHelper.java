@@ -163,7 +163,7 @@ public class MappingServiceHelper {
                         break;
                 }
                 break;
-            case "lineadepedido":
+            case "linea_pedido":
                 LineadepedidoSpecificServiceImplementation oLineadepedidoService = new LineadepedidoSpecificServiceImplementation(oRequest);
                 switch (op) {
                     case "get":
@@ -181,18 +181,12 @@ public class MappingServiceHelper {
                     case "getcount":
                         oReplyBean = oLineadepedidoService.getCount();
                         break;
-                    case "getpagexpedido":
+                    case "getpageX":
                         oReplyBean = oLineadepedidoService.getPageX();
                         break;
-                    case "getcountxpedido":
+                    case "getcountX":
                         oReplyBean = oLineadepedidoService.getCountX();
-                        break;
-                    case "getpagexproducto":
-                        oReplyBean = oLineadepedidoService.getPageX();
-                        break;
-                    case "getcountxproducto":
-                        oReplyBean = oLineadepedidoService.getCountX();
-                        break;
+                        break;                 
                     default:
                         oReplyBean = new ReplyBean(500, "Operation not found : Please contact your administrator");
                         break;

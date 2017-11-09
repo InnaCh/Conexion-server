@@ -147,11 +147,12 @@ public abstract class GenericViewService implements ViewServiceInterface {
         }
     }
 
+    @Override
     public ReplyBean getPageX() throws Exception {
-        if (this.checkPermission("getpagex")) {
+        if (this.checkPermission("getpageX")) {
             int np = Integer.parseInt(oRequest.getParameter("np"));
             int rpp = Integer.parseInt(oRequest.getParameter("rpp"));
-            int id = Integer.parseInt(oRequest.getParameter("id"));
+           // int id = Integer.parseInt(oRequest.getParameter("id"));
             int id_foreign = Integer.parseInt(oRequest.getParameter("id_foreign"));
             String ob_foreign = oRequest.getParameter("ob_foreign");
             String strOrder = oRequest.getParameter("order");
@@ -190,7 +191,7 @@ public abstract class GenericViewService implements ViewServiceInterface {
 
     @Override
     public ReplyBean getCountX() throws Exception {
-        if (this.checkPermission("getcountx")) {
+        if (this.checkPermission("getcountX")) {
             Long lResult;
             Connection oConnection = null;
             ConnectionInterface oPooledConnection = null;
