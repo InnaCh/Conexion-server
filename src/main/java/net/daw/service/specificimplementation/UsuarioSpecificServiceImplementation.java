@@ -116,18 +116,18 @@ public class UsuarioSpecificServiceImplementation extends GenericTableService {
         return oReplyBean;
     }
 
-    public ReplyBean getSessionUserLevel() {
-        ReplyBean oReplyBean = null;
-        String strAnswer = null;
-        UsuarioSpecificBeanImplementation oUserBean = (UsuarioSpecificBeanImplementation) oRequest.getSession().getAttribute("user");
-        Map<Integer, String> map = new HashMap<>();
-        if (oUserBean == null) {
-            oReplyBean = new ReplyBean(401, EncodingUtilHelper.quotate("Unauthorized"));
-        } else {
-            oReplyBean = new ReplyBean(200, EncodingUtilHelper.quotate(oUserBean.getId_tipousuario().toString()));
-        }
-        return oReplyBean;
-    }
+//    public ReplyBean getSessionUserLevel() {
+//        ReplyBean oReplyBean = null;
+//        String strAnswer = null;
+//        UsuarioSpecificBeanImplementation oUserBean = (UsuarioSpecificBeanImplementation) oRequest.getSession().getAttribute("user");
+//        Map<Integer, String> map = new HashMap<>();
+//        if (oUserBean == null) {
+//            oReplyBean = new ReplyBean(401, EncodingUtilHelper.quotate("Unauthorized"));
+//        } else {
+//            oReplyBean = new ReplyBean(200, EncodingUtilHelper.quotate(oUserBean.getId_tipousuario().toString()));
+//        }
+//        return oReplyBean;
+//    }
 
     public ReplyBean setPass() throws Exception {
         if (this.checkPermission("passchange")) {

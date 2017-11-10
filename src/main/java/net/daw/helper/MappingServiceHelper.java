@@ -73,7 +73,7 @@ public class MappingServiceHelper {
                     case "logout":
                         oReplyBean = oUsuarioService.logout();
                         break;
-                    case "check":
+                    case "getsessionstatus":
                         oReplyBean = oUsuarioService.getSessionStatus();
                         break;
                     case "getcountxtipousuario":
